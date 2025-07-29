@@ -22,3 +22,48 @@ function verificarChute() {
 function generateRandomNumber() {
     return parseInt(Math.random() * 10 + 1);
 }
+
+
+// function helloWorld() {
+//     console.log("Olá, mundo!")
+// }
+// helloWorld();
+
+// function nomeConsole() {
+//     let nome = prompt("Digite seu nome:");
+//     console.log(`Olá, ${nome}`);
+// }
+// nomeConsole();
+
+// function dobroValor() {
+//     let valor = prompt("Digite seu valor:");
+//     let dobro = valor * 2;
+//     console.log(dobro);
+// }
+// dobroValor();
+
+// function mediaTresNumeros() {
+//     let numero1 = parseFloat(prompt("Digite o primeiro número: "));
+//     let numero2 = parseFloat(prompt("Digite o segundo número: "));
+//     let numero3 = parseFloat(prompt("Digite o terceiro número: "));
+//     let media = (numero1 + numero2 + numero3)/ 3; 
+//     console.log(`A média entre ${numero1}, ${numero2} e ${numero3} é: ${media}`);
+// }
+// mediaTresNumeros();
+
+// function retornaMax() {
+//     let numero1 = parseFloat(prompt("Digite o primeiro número: "));
+//     let numero2 = parseFloat(prompt("Digite o segundo número: "));
+//     if (numero1 > numero2) {
+//         console.log(numero1);
+//     } else {
+//         console.log(numero2);
+//     }
+// }
+// retornaMax();
+
+// function retornaMultiplicacao() {
+//     let numero1 = parseFloat(prompt("Digite seu número: "));
+//     return numero1 * numero1;
+// }
+// retornaMultiplicacao();
