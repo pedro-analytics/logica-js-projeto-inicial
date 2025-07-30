@@ -4,7 +4,8 @@
 // let paragrafo = document.querySelector("p");
 // paragrafo.innerHTML = "Escolha um número entre 1 e 10";
 
-let numeroSecreto = 7;
+let numeroSecreto = generateRandomNumber();
+let tentativas = 1
 
 function exibirTextoNaTela(tag, texto) {
     let campo = document.querySelector(tag);
@@ -16,15 +17,19 @@ exibirTextoNaTela("p", "Escolha um número entre 1 e 10");
 
 function verificarChute() {
     let chute = document.querySelector("input").value;
+    
     if (chute == numeroSecreto) {
         exibirTextoNaTela("h1", "Acertou!");
-        exibirTextoNaTela("p", "Você acertou o número secreto!");
+        let palavraTentativa = tentativas > 1 ? "tentativas" : "tentativa";
+        let mensagemTentativas = `Você acertou o número secreto com ${tentativas} ${palavraTentativa}`;
+        exibirTextoNaTela("p", mensagemTentativas);
     } else {
         if (chute > numeroSecreto) {
             exibirTextoNaTela("p", "O número secreto é menor.");
         } else{
             exibirTextoNaTela("p", "O número secreto é maior.");
         }
+        tentativas++
     }
 }
 
