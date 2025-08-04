@@ -4,58 +4,62 @@
 // let paragrafo = document.querySelector("p");
 // paragrafo.innerHTML = "Escolha um número entre 1 e 10";
 
-let numeroSecreto = generateRandomNumber();
-let tentativas = 1
+// codigo aulas
 
-function exibirTextoNaTela(tag, texto) {
-    let campo = document.querySelector(tag);
-    campo.innerHTML = texto;
-}
+// let numeroSecreto = generateRandomNumber();
+// let tentativas = 1
 
-function exibirMensagemInicial() {
-    exibirTextoNaTela("h1", "Jogo do número secreto");
-    exibirTextoNaTela("p", "Escolha um número entre 1 e 10");
-}
+// function exibirTextoNaTela(tag, texto) {
+//     let campo = document.querySelector(tag);
+//     campo.innerHTML = texto;
+// }
 
-exibirTextoNaTela("h1", "Jogo do número secreto");
-exibirTextoNaTela("p", "Escolha um número entre 1 e 10");
+// function exibirMensagemInicial() {
+//     exibirTextoNaTela("h1", "Jogo do número secreto");
+//     exibirTextoNaTela("p", "Escolha um número entre 1 e 10");
+// }
 
-function verificarChute() {
-    let chute = document.querySelector("input").value;
+// exibirTextoNaTela("h1", "Jogo do número secreto");
+// exibirTextoNaTela("p", "Escolha um número entre 1 e 10");
+
+// function verificarChute() {
+//     let chute = document.querySelector("input").value;
     
-    if (chute == numeroSecreto) {
-        exibirTextoNaTela("h1", "Acertou!");
-        let palavraTentativa = tentativas > 1 ? "tentativas" : "tentativa";
-        let mensagemTentativas = `Você acertou o número secreto com ${tentativas} ${palavraTentativa}`;
-        exibirTextoNaTela("p", mensagemTentativas);
-        document.getElementById("reiniciar").removeAttribute("disabled");
-    } else {
-        if (chute > numeroSecreto) {
-            exibirTextoNaTela("p", "O número secreto é menor.");
-        } else{
-            exibirTextoNaTela("p", "O número secreto é maior.");
-        }
-        tentativas++
-        limparCampo();
-    }
-}
+//     if (chute == numeroSecreto) {
+//         exibirTextoNaTela("h1", "Acertou!");
+//         let palavraTentativa = tentativas > 1 ? "tentativas" : "tentativa";
+//         let mensagemTentativas = `Você acertou o número secreto com ${tentativas} ${palavraTentativa}`;
+//         exibirTextoNaTela("p", mensagemTentativas);
+//         document.getElementById("reiniciar").removeAttribute("disabled");
+//     } else {
+//         if (chute > numeroSecreto) {
+//             exibirTextoNaTela("p", "O número secreto é menor.");
+//         } else{
+//             exibirTextoNaTela("p", "O número secreto é maior.");
+//         }
+//         tentativas++
+//         limparCampo();
+//     }
+// }
 
-function generateRandomNumber() {
-    return parseInt(Math.random() * 10 + 1);
-}
+// function generateRandomNumber() {
+//     return parseInt(Math.random() * 10 + 1);
+// }
 
-function limparCampo() {
-    chute = document.querySelector("input");
-    chute.value = "";
-}
+// function limparCampo() {
+//     chute = document.querySelector("input");
+//     chute.value = "";
+// }
 
-function reiniciarJogo() {
-    numeroSecreto = generateRandomNumber();
-    limparCampo();
-    tentativas = 1;
-    exibirMensagemInicial();
-    document.getElementById("reiniciar").setAttribute("disabled", true);
-}
+// function reiniciarJogo() {
+//     numeroSecreto = generateRandomNumber();
+//     limparCampo();
+//     tentativas = 1;
+//     exibirMensagemInicial();
+//     document.getElementById("reiniciar").setAttribute("disabled", true);
+// }
+
+// codigo aulas
 
 // function helloWorld() {
 //     console.log("Olá, mundo!")
@@ -100,3 +104,57 @@ function reiniciarJogo() {
 //     return numero1 * numero1;
 // }
 // retornaMultiplicacao();
+
+// desafios aula 03
+
+function calcularImc(altura, peso) {
+    let imc = peso / (altura * 2);
+    console.log(imc);
+}
+
+calcularImc(1.73, 53);
+
+function factorialize(num) {
+  if (num < 0) 
+        return -1;
+  else if (num == 0) 
+      return 1;
+    else {
+        return (num * factorialize(num - 1));
+    }
+}
+console.log(factorialize(5));
+
+function converterDolar(dolar) {
+    return dolar * 4.80;
+}
+
+console.log(converterDolar(2));
+
+function calcularPerimetroRetangulo(largura, altura) {
+    let perimetro = 2 * (largura + altura);
+    return perimetro;
+};
+
+console.log(calcularPerimetroRetangulo(50, 50));
+
+function calcularPerimetroCirculo(raio) {
+    let pi = 3.14;
+    let perimetro = 2 * pi * raio;
+    let area = pi * (raio ^ 2);
+    console.log(perimetro, area);
+}
+
+calcularPerimetroCirculo(5);
+
+
+let contador = 0
+
+function tabuada(numero) {
+    while (contador < 10) {
+        contador++
+        console.log(`A multiplicação de ${numero} e ${contador} é ${numero * contador}`);
+    }
+}
+
+tabuada(45);
